@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% block app %}
+
+    
+	</div>
+	<div id="Intro">
+	<h1 id="status">Easily find local vendors or existing products for your technical needs.</h1>
+
+	
+	<div id="xBox">
+		<ul>
+			<li>1. Describe a problem you have that you think could be solved by a technical solution or service<span class="link" id="ViewEx">View Examples</span></li>
+			
+				<div id="xProb">
+				<ul>
+					<li><div class="quotes">EXAMPLE 1: <br>"We need a CRM system where we can keep track of our customers account credits.<br>
+						It has to integrate with Simply Accounting.
+							<br>We have to be able to handle discounts that give a certain amount of credits, so it cannot function only on the basis of money paid.
+							<br> We'd rather have something internal, not on the web, not "in the cloud" "
+							</div>
+							</li>
+				
+					<li><div class="quotes">
+					EXAMPLE 2: <br>"We need a calendaring system that allows us to book times for customers on a per-minute basis, not per hour or half-hour as we usually see. The system needs to integrate with Freshbooks and needs to have a management interface and web interface for customers"</div></li> 
+				</ul>
+				</div>
+			
+			<li>2. Within 48 hours you will receive an email with products and services and contact information that best match your problem<a href="#readmore">Read more</a></li>
+			</ul>
+		<div id="new_form">
+	       	<form action="." method = "POST">
+			{% csrf_token %} 
+			<table>
+			    <tr><td id="formH" colspan=2 align=left>Describe the problem:</td><td></td><td></td></tr>
+			    <tr><td></td><td>{{ form.problem }}</td><td></td></tr>
+				<tr><td></td><td><span id="smallInfo">(We don't provide anyone with data that could connect your identity to your problem.)</span></td><td></td></tr>
+			    <tr><td></td><td>Submit the email address where you want to receive the results:</td><td></td></tr>
+			{% if form.email.errors %}
+				<tr><td></td><td>{{ form.email.errors }}</td><td></td></tr>
+			{% endif%}
+				<tr><td></td><td>{{ form.email }} <span id="smallInfo">(We will send you news about our product, but we will never share this email.)</span></td><td></td></tr>
+				<tr><td>
+			</table>
+			<input type="submit" value="Submit">
+			</form>
+	    </div><!-- new_form-->
+		
+		</div><!-- xBox -->
+		
+		
+		
+</div><!-- intro -->
+<div class="disclaimer2"><a name="readmore"></a>
+<p class="infoText">Unprob is in Alpha, we are early in the development. If there are any problems with your submission, we will contact you personally. </p><p class="infoText">Riku, Alex, Dom.</p>
+</div>
+<div id="under">
+	
+
+<div class="parag">
+	<h2>How can this be free?</h2>
+	<p class="infotext">It's not really, we charge a small commission from the companies that find problems that they want to solve through us. </p>
+<div class="parag">
+	<h2>What's it all about?</h2>
+	<p>We've noticed that finding a good product or excellent services is like finding a needle in a haystack. You to search the web, read blogs, ask friends, scour directories and then call everywhere.</p>
+	<p>It's also very difficult to sell these days, there's just so much noise out there. There are many companies out there looking for solutions that exist but that they can't find.</p>
+	<p>We think this is all a very inefficient process of matching supply and demand. With unprob, more matches will be made, more problems will be solved and businesses all over the world will run more smoothly.</p>
+	<p>We use Machine Learning and Web Crawling to automatically bring you the best results and prices for any problem you have. We still use our own brains a lot as well to ensure good results.
+	</p>
+	<p>If you want to contact us, you can call +1 514 889 1173, send us an email to team - at - unprob.com or ping us on twitter at <a href="http://twitter.com/unprob">@unprob</a>
+	</div>
+	
+</div>
+	
+	
+
+</div>
+<div id="spacer">copyright unprob.com</div>
+
+
+
+{% endblock %}
