@@ -101,16 +101,31 @@ ul {
 	margin:0px;
 }
 
+#logo {
+	font-family: 'Lobster Two', Helvetica, serif;
+	text-decoration:none;
+	color: #9bcb61;
+	text-shadow: #c3ff7a 0 1px 0;
+	padding-bottom:7px;
+	font-size:18px;
+	
+}
+
 h1 {
+	margin-top:10px;
 	font-family: helvetica, sans-serif;
+	font-size: 32px;
+	text-shadow: 0 1px 1px rgb(104,125,196);
+	color: rgb(11,21,31);
+	
+}
+
+#status {
 	margin-right: auto;
 	margin-left: auto;
 	margin-top: 55px;
 	margin-bottom: 35px;
 	width: 800px;
-	font-size: 42px;
-	text-shadow: 0 1px 1px rgb(104,125,196);
-	color: rgb(11,21,31);
 	
 }
 
